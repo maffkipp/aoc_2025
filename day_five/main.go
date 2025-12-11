@@ -111,7 +111,7 @@ func parseFreshRange(line string) (bound Bound, err error) {
 	for _, s := range strings.Split(line, "-") {
 		num, err := strconv.Atoi(s)
 		if err != nil {
-			return bound, fmt.Errorf("invalid bound: %s %s", bound, err)
+			return bound, fmt.Errorf("invalid bound: %+v %s", bound, err)
 		}
 		nums = append(nums, num)
 	}
